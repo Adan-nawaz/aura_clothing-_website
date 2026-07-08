@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA — Timeless Style for Every Age</title>
+  <meta name="description" content="AURA is a premium clothing brand offering elegant, timeless fashion for women, men, and children. Discover collections crafted with refined taste." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <p>Free shipping on orders above PKR 3,000 &nbsp;|&nbsp; New Collection: Summer Solstice &nbsp;|&nbsp; <a href="#">Shop Now</a></p>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <button class="header__menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="header__nav" id="desktopNav">
+        <a href="#women" class="nav-link">WOMEN</a>
+        <a href="#men" class="nav-link">MEN</a>
+        <a href="#kids" class="nav-link">KIDS</a>
+        <a href="#collections" class="nav-link">COLLECTIONS</a>
+      </nav>
+
+      <a href="#" class="header__logo">AURA</a>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <div class="user-menu" id="userMenu">
+          <button class="icon-btn" aria-label="Account" onclick="document.getElementById('loginModal').classList.add('open'); document.body.style.overflow='hidden'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </button>
+          <div class="user-dropdown">
+            <span id="userDisplayName"></span>
+            <a href="#" id="logoutLink">Logout</a>
+          </div>
+        </div>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="search-bar" id="searchBar">
+      <div class="search-bar__inner">
+        <input type="text" placeholder="Search for styles, collections..." id="searchInput" />
+        <button class="icon-btn" id="searchClose">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="mobileNavClose">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="mobile-nav__links">
+      <a href="#women">WOMEN</a>
+      <a href="#men">MEN</a>
+      <a href="#kids">KIDS</a>
+      <a href="#collections">COLLECTIONS</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+    <div class="mobile-nav__footer">
+      <p>© 2025 AURA. All rights reserved.</p>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero__slides">
+        <div class="hero__slide active" style="background-image: url('images/hero_women.png')">
+          <div class="hero__content">
+            <span class="hero__tag">New Arrivals</span>
+            <h1 class="hero__title">Timeless<br/><em>Elegance</em></h1>
+            <p class="hero__subtitle">Crafted for women who carry grace effortlessly</p>
+            <a href="#women" class="btn btn--light">Explore Women</a>
+          </div>
+        </div>
+        <div class="hero__slide" style="background-image: url('images/hero_men.png')">
+          <div class="hero__content">
+            <span class="hero__tag">Summer Collection</span>
+            <h1 class="hero__title">Refined<br/><em>Classics</em></h1>
+            <p class="hero__subtitle">Men's wear designed for the modern gentleman</p>
+            <a href="#men" class="btn btn--light">Explore Men</a>
+          </div>
+        </div>
+        <div class="hero__slide" style="background-image: url('images/hero_kids.png')">
+          <div class="hero__content">
+            <span class="hero__tag">Kids Collection</span>
+            <h1 class="hero__title">Adorable<br/><em>Comfort</em></h1>
+            <p class="hero__subtitle">Soft, playful and perfectly crafted for little ones</p>
+            <a href="#kids" class="btn btn--light">Explore Kids</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__controls">
+        <button class="hero__dot active" data-index="0"></button>
+        <button class="hero__dot" data-index="1"></button>
+        <button class="hero__dot" data-index="2"></button>
+      </div>
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev">&#8592;</button>
+      <button class="hero__arrow hero__arrow--next" id="heroNext">&#8594;</button>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>WOMEN</span><span>✦</span><span>MEN</span><span>✦</span><span>KIDS</span><span>✦</span>
+        <span>NEW ARRIVALS</span><span>✦</span><span>SUMMER 2025</span><span>✦</span><span>AURA</span><span>✦</span>
+        <span>WOMEN</span><span>✦</span><span>MEN</span><span>✦</span><span>KIDS</span><span>✦</span>
+        <span>NEW ARRIVALS</span><span>✦</span><span>SUMMER 2025</span><span>✦</span><span>AURA</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- CATEGORY CARDS -->
+    <section class="categories section-pad" id="collections">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Shop By Category</p>
+          <h2 class="section-title">Style for Every Story</h2>
+        </div>
+        <div class="categories__grid">
+          <a href="#women" class="cat-card" id="cat-women">
+            <div class="cat-card__img-wrap">
+              <img src="images/hero_women.png" alt="Women's Collection" loading="lazy" />
+            </div>
+            <div class="cat-card__body">
+              <h3>Women</h3>
+              <span>Explore Collection →</span>
+            </div>
+          </a>
+          <a href="#men" class="cat-card cat-card--tall" id="cat-men">
+            <div class="cat-card__img-wrap">
+              <img src="images/hero_men.png" alt="Men's Collection" loading="lazy" />
+            </div>
+            <div class="cat-card__body">
+              <h3>Men</h3>
+              <span>Explore Collection →</span>
+            </div>
+          </a>
+          <a href="#kids" class="cat-card" id="cat-kids">
+            <div class="cat-card__img-wrap">
+              <img src="images/hero_kids.png" alt="Kids' Collection" loading="lazy" />
+            </div>
+            <div class="cat-card__body">
+              <h3>Kids</h3>
+              <span>Explore Collection →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WOMEN SECTION -->
+    <section class="products-section section-pad" id="women">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Her Collection</p>
+          <h2 class="section-title">For Women</h2>
+          <p class="section-desc">Timeless pieces that embrace every age and every story.</p>
+        </div>
+        <div class="products-grid" id="womenGrid">
+          <!-- Products injected by JS -->
+        </div>
+        <div class="section-cta">
+          <a href="#" class="btn btn--outline">View All Women</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL BANNER -->
+    <section class="full-banner">
+      <div class="full-banner__img" style="background-image: url('images/banner_new.png')"></div>
+      <div class="full-banner__content">
+        <span class="hero__tag">Limited Edition</span>
+        <h2>The Solstice<br/><em>Edit</em></h2>
+        <p>Where light meets fabric. A collection born from the longest day.</p>
+        <a href="#collections" class="btn btn--light">Discover Now</a>
+      </div>
+    </section>
+
+    <!-- MEN SECTION -->
+    <section class="products-section section-pad" id="men">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">His Collection</p>
+          <h2 class="section-title">For Men</h2>
+          <p class="section-desc">Refined silhouettes and premium fabrics for the modern man.</p>
+        </div>
+        <div class="products-grid" id="menGrid"></div>
+        <div class="section-cta">
+          <a href="#" class="btn btn--outline">View All Men</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KIDS SECTION -->
+    <section class="products-section section-pad bg-warm" id="kids">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Little Ones</p>
+          <h2 class="section-title">For Kids</h2>
+          <p class="section-desc">Soft textures, playful designs — comfort crafted for little hearts.</p>
+        </div>
+        <div class="products-grid" id="kidsGrid"></div>
+        <div class="section-cta">
+          <a href="#" class="btn btn--outline">View All Kids</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="brand-story section-pad" id="about">
+      <div class="container brand-story__inner">
+        <div class="brand-story__img">
+          <img src="images/collection_summer.png" alt="AURA Brand Story" loading="lazy" />
+        </div>
+        <div class="brand-story__text">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title">What is AURA?</h2>
+          <p>AURA was born from a simple belief — that clothing should feel like a second skin. Not just worn, but <em>lived in</em>.</p>
+          <p>We design for every woman from 15 to 60, for every man who values quiet elegance, and for every child who deserves to feel special. Our palette is restrained, our craftsmanship deliberate.</p>
+          <p>This is not fast fashion. This is <strong>AURA</strong> — your radiance, refined.</p>
+          <a href="#collections" class="btn btn--dark">Our Collections</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES STRIP -->
+    <section class="features-strip">
+      <div class="container features-strip__grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <h4>Free Delivery</h4>
+          <p>On all orders above PKR 3,000</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </div>
+          <h4>Easy Returns</h4>
+          <p>7-day hassle-free returns</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h4>Secure Payment</h4>
+          <p>100% safe & secure checkout</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h4>Premium Quality</h4>
+          <p>Curated fabrics & craftsmanship</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter section-pad">
+      <div class="container newsletter__inner">
+        <p class="section-eyebrow">Stay in the Loop</p>
+        <h2 class="section-title">Join the AURA Circle</h2>
+        <p class="newsletter__desc">Be the first to know about new collections, exclusive offers, and style stories.</p>
+        <form class="newsletter__form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email address" required id="emailInput" />
+          <button type="submit" class="btn btn--dark">Subscribe</button>
+        </form>
+        <p class="newsletter__note" id="newsletterMsg"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo">AURA</a>
+        <p>Style is not just what you wear —<br/>it's how you carry the world.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>Shop</h5>
+        <a href="#women">Women</a>
+        <a href="#men">Men</a>
+        <a href="#kids">Kids</a>
+        <a href="#collections">New Arrivals</a>
+        <a href="#">Sale</a>
+      </div>
+      <div class="footer__col">
+        <h5>Help</h5>
+        <a href="#">Size Guide</a>
+        <a href="#">Track Order</a>
+        <a href="#">Returns & Exchanges</a>
+        <a href="#">FAQs</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <a href="#about">Our Story</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 AURA Clothing. All Rights Reserved.</p>
+        <p>Made with love in Pakistan 🇵🇰</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__header">
+      <h3>Your Cart</h3>
+      <button class="icon-btn" id="cartDrawerClose">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cartBody"><p class="cart-empty">Log in to view your cart.</p></div>
+    <div class="cart-drawer__footer" id="cartFooter"></div>
+  </div>
+
+  <!-- LOGIN/REGISTER MODAL -->
+  <div class="site-modal" id="loginModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-box__close" data-modal-close="loginModal">✕</button>
+      <div class="auth-logo">AURA</div>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="loginPanel">Sign In</button>
+        <button class="auth-tab" data-tab="registerPanel">Register</button>
+      </div>
+      <div class="auth-panel active" id="loginPanel">
+        <form id="loginForm">
+          <div class="site-form-group"><label>Email</label><input type="email" id="loginEmail" required placeholder="your@email.com"/></div>
+          <div class="site-form-group"><label>Password</label><input type="password" id="loginPassword" required placeholder="••••••••"/></div>
+          <p class="form-error" id="loginError"></p>
+          <button type="submit" class="btn btn--dark" style="width:100%;justify-content:center">Sign In</button>
+        </form>
+      </div>
+      <div class="auth-panel" id="registerPanel">
+        <form id="registerForm">
+          <div class="site-form-group"><label>Full Name</label><input type="text" id="regName" required placeholder="Your Name"/></div>
+          <div class="site-form-group"><label>Email</label><input type="email" id="regEmail" required placeholder="your@email.com"/></div>
+          <div class="site-form-group"><label>Password</label><input type="password" id="regPassword" required placeholder="Min. 6 characters"/></div>
+          <p class="form-error" id="regError"></p>
+          <button type="submit" class="btn btn--dark" style="width:100%;justify-content:center">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="site-modal" id="checkoutModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box modal-box--wide">
+      <button class="modal-box__close" data-modal-close="checkoutModal">✕</button>
+      <h2 class="modal-box__title">Complete Your Order</h2>
+      <form id="checkoutForm">
+        <div class="checkout-grid">
+          <div class="site-form-group" style="grid-column: span 2"><label>Full Name *</label><input type="text" id="coName" required placeholder="Recipient Name"/></div>
+          <div class="site-form-group"><label>Delivery Address *</label><input type="text" id="coAddress" required placeholder="Street, House No."/></div>
+          <div class="site-form-group"><label>City *</label><input type="text" id="coCity" required placeholder="Karachi, Lahore..."/></div>
+          <div class="site-form-group"><label>Phone Number *</label><input type="tel" id="coPhone" required placeholder="03XX-XXXXXXX"/></div>
+          <div class="site-form-group"><label>Payment Method</label>
+            <select id="coPayment">
+              <option value="cod">Cash on Delivery</option>
+              <option value="jazzcash">JazzCash</option>
+              <option value="easypaisa">EasyPaisa</option>
+            </select>
+          </div>
+        </div>
+        <div class="site-form-group"><label>Order Notes (optional)</label><textarea id="coNotes" rows="2" placeholder="Any special instructions..."></textarea></div>
+        <button type="submit" class="btn btn--dark" style="width:100%;justify-content:center;margin-top:8px">PLACE ORDER</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION (before footer) -->
+  <section class="contact-section section-pad" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h2 class="section-title">We'd Love to Hear From You</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h4>AURA Clothing</h4>
+          <p>📍 Karachi, Pakistan</p>
+          <p>📞 +92 300 0000000</p>
+          <p>✉️ hello@aura.pk</p>
+          <p>🕐 Mon–Sat: 10am – 8pm</p>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="contact-form__row">
+            <div class="site-form-group"><label>Name</label><input type="text" id="contactName" required placeholder="Your Name"/></div>
+            <div class="site-form-group"><label>Email</label><input type="email" id="contactEmail" required placeholder="your@email.com"/></div>
+          </div>
+          <div class="site-form-group"><label>Subject</label><input type="text" id="contactSubject" placeholder="How can we help?"/></div>
+          <div class="site-form-group"><label>Message</label><textarea id="contactMessage" rows="4" required placeholder="Your message..."></textarea></div>
+          <p class="form-success" id="contactMsg"></p>
+          <button type="submit" class="btn btn--dark">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
