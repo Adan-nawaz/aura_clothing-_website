@@ -4,8 +4,19 @@ AURA is a premium, full-stack e-commerce clothing brand website. It features a m
 
 ---
 
-## 🔗 Live Demo
-Explore the live website online: **[AURA Clothing Store (Live)](https://aura-clothing-website.onrender.com)**  
+## 🔗 Sharing & Deployment
+
+### ⚡ Quick Sharing (Free Tunnel)
+If you want to share your locally running website with someone instantly, you can tunnel it using standard SSH remote forwarding:
+1. Make sure the server is running: `node server.js`
+2. Open a new terminal tab and run:
+   ```bash
+   ssh -o ServerAliveInterval=60 -R 80:localhost:3000 nokey@localhost.run
+   ```
+3. Copy the generated link (e.g. `https://xxxx.lhr.life`) and share it!
+
+### 🐳 Cloud Deployment (Docker)
+This project includes a `Dockerfile` and `.dockerignore`, making it ready to deploy 24/7 on free container hosting platforms (such as **Koyeb** or **Hugging Face Spaces**) without requiring any credit card verification.
 
 ---
 
